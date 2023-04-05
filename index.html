@@ -13,26 +13,59 @@
     <div class="form">
         <form action="#" id="form" class="form_body">
             <h2 class="form_title">Umów się na wizyte</h2>
+            <!-- Imie użytkownika -->
             <div class="form_item">
                 <label for="formName" class="form_label">Imie*:</label>
                 <input type="text" id="formName" name="name" class="form-imput">
             </div>
+            <!-- Telefon użytkownika -->
             <div class="form_item">
                 <label for="formTel" class="form_label">Telefon*:</label>
                 <input type="text" id="formTel" name="telefon" class="form-imput">
             </div>
+            <!-- E-mail użytkownika -->
             <div class="form_item">
                 <label for="formEmail" class="form_label">E-mail:</label>
                 <input type="text" id="formEmail" name="email" class="form-imput">
             </div>
+            <!-- Menu uslug na brwi -->
             <div class="form_item">
-                <label for="formMessage" class="form_label">Wiadomość (opcionalnie)</label>
-                <textarea name="message" id="formMessage" cols="30" rows="10" class="form_input"></textarea>
+                <div class="form_label">Zabiegi na Brwi</div>
+                <select name="brews" id="brews_select">
+                    <option value="">Regulacja brwi 45,00 zł</option>
+                    <option value="">Regulacja brwi męska 45,00 zł</option>
+                    <option value="">Regulacja brwi + przerzędzenie 65,00 zł</option>
+                    <option value="">Regulacja brwi + koloryzacja 80,00 zł</option>
+                    <option value="">Koloryzacja brwi(farbka/henna pudrowa) 45,00 zł</option>
+                    <option value="">Regulacja + koloryzacja + botox brwi💚 110,00 zł</option>
+                    <option value="">Botox brwi O2Farm💚 45,00 zł</option>
+                    <option value=""> Henna brwi + botox O2Farm💚 75,00 zł</option>
+                    <option value=""> Regulacja brwi + botox O2Farm💚 75,00 zł</option>
+                    <option value=""> Flexing brwi/laminacja od Elan "Supersonic"💖 135,00 zł</option>
+                    <option value=""> Laminacja brwi + regulacja 125,00 zł</option>
+                    <option value=""> Makijaz permanentny brwi (modelka) 290,00 zł</option>
+                    <option value=""> Konsultacja makijaz permanentny Darmowa</option>
+                </select>
             </div>
+            <!-- Menu uslug na rzęsy -->
+            <div class="form_item">
+                <div class="form_label">Zabiegi na rzesy</div>
+                <select name="things" id="things_select">
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
+            <!-- Pole tekstowe dla wiadomości -->
+            <div class="form_item">
+                <label for="formMessage" class="form_label">Wiadomość (opcionalnie):</label>
+                <textarea name="message" id="formMessage" class="form_input"></textarea>
+            </div>
+            <!-- Checkbox na zgodde marketingową -->
             <div class="option_item">
                 <input type="radio" id="agreement" value="accepted" class="option_input">
                 <label for="agreement" class="option_label">Zgoda na kontakt marketingowy</label>
             </div>
+           
         </form>
     </div>
 </div>    

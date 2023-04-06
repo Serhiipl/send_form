@@ -16,17 +16,17 @@
             <!-- Imie użytkownika -->
             <div class="form_item">
                 <label for="formName" class="form_label">Imie*:</label>
-                <input type="text" id="formName" name="name" class="form-imput">
+                <input type="text" id="formName" name="name" class="form_input">
             </div>
             <!-- Telefon użytkownika -->
             <div class="form_item">
                 <label for="formTel" class="form_label">Telefon*:</label>
-                <input type="text" id="formTel" name="telefon" class="form-imput">
+                <input type="text" id="formTel" name="telefon" class="form_input">
             </div>
             <!-- E-mail użytkownika -->
             <div class="form_item">
                 <label for="formEmail" class="form_label">E-mail:</label>
-                <input type="text" id="formEmail" name="email" class="form-imput">
+                <input type="text" id="formEmail" name="email" class="form_input">
             </div>
             <!-- Menu uslug na brwi -->
             <div class="form_item">
@@ -78,14 +78,16 @@
             <!-- Pole tekstowe dla wiadomości -->
             <div class="form_item">
                 <label for="formMessage" class="form_label">Wiadomość (opcionalnie):</label>
-                <textarea name="message" id="formMessage" class="form_input"></textarea>
+                <textarea name="message" id="formMessage" class="form_input _textarea"></textarea>
             </div>
             <!-- Checkbox na zgodde marketingową -->
-            <div class="option_item">
-                <input type="radio" id="agreement" value="accepted" class="option_input">
-                <label for="agreement" class="option_label">Zgoda na kontakt marketingowy</label>
+            <div class="form_item">
+                <div class="checkbox">
+                    <input type="checkbox" checked id="form_agreement" value="accepted" name="agreement" class="checkbox_input">
+                    <label for="form_agreement" class="checkbox_label">Zgoda na kontakt marketingowy</label>
+                </div>
             </div>
-           
+            <button type="submit" class="form_button">Zatwierdzić</button>
         </form>
     </div>
 </div>    

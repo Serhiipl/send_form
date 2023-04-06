@@ -73,3 +73,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*----------------------------------------------------------------*/
+.form {
+  max-width: 34.375rem;
+  margin: 0rem auto;
+  color: antiquewhite;
+  padding: 1.875rem 0;
+}
+.form_body {
+  padding: 1rem 1rem;
+  background-color: rgb(174, 170, 141);
+}
+.form_title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0rem 0rem 1.875rem 0rem;
+}
+.form_item {
+  margin: 0rem 0rem 1.3rem 0rem;
+}
+.form_label {
+  font-size: 1.125rem;
+  display: block;
+  margin: 0rem 0rem 0.6rem 0rem;
+}
+.form_input {
+  height: 3.125rem;
+  padding: 0rem 1.25rem;
+  border-radius: 0.3125rem;
+  width: 100%;
+  font-size: 1.125rem;
+}
+.form textarea {
+  min-height: 7.5rem;
+  resize: vertical;
+  padding: 1rem;
+}

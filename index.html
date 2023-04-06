@@ -32,6 +32,7 @@
             <div class="form_item">
                 <div class="form_label">Zabiegi na Brwi</div>
                 <select name="brews" id="brews_select">
+                    <option value=""></option>
                     <option value="">Regulacja brwi 45,00 zł</option>
                     <option value="">Regulacja brwi męska 45,00 zł</option>
                     <option value="">Regulacja brwi + przerzędzenie 65,00 zł</option>
@@ -43,17 +44,36 @@
                     <option value=""> Regulacja brwi + botox O2Farm💚 75,00 zł</option>
                     <option value=""> Flexing brwi/laminacja od Elan "Supersonic"💖 135,00 zł</option>
                     <option value=""> Laminacja brwi + regulacja 125,00 zł</option>
+                    <option value=""> Pakiet 3w1 brwi (farbowanie+regulacja+laminacja) 150,00 zł</option>
+                    <option value=""> Laminacja + regulacja + przerzędzenie 165,00 zł</option>
                     <option value=""> Makijaz permanentny brwi (modelka) 290,00 zł</option>
                     <option value=""> Konsultacja makijaz permanentny Darmowa</option>
                 </select>
             </div>
-            <!-- Menu uslug na rzęsy -->
+            <!-- Menu uslug na rzęsy + multi uslugi -->
             <div class="form_item">
-                <div class="form_label">Zabiegi na rzesy</div>
+                <div class="form_label">Rzesy + multi usługi</div>
                 <select name="things" id="things_select">
                     <option value=""></option>
-                    <option value=""></option>
+                    <option value="">Laminacja dolnych rzes(dodatek do laminacji rzęs) 55,00 zł</option>
+                    <option value="">Botox rzęs(dostepny z innymi zabiegami)💚 25,00 zł</option>
+                    <option value="">Botox brwi + botox rzęs 55,00 zł</option>
+                    <option value="">Henna brwi + henna rzęs 🖤 75,00 zł</option>
+                    <option value="">Regulacja brwi + henna rzęs 🖤 75,00 zł</option>
+                    <option value="">Regulacja + koloryzacja + henna rzęs 110,00 zł</option>
+                    <option value="">Laminacja rzes + odżywka bez farbowania 135,00 zł</option>
+                    <option value="">Laminacja brwi + henna rzęs 135,00 zł</option>
+                    <option value="">Flexing rzes/ekstra laminacja "Supersonic"💖 165,00 zł</option>
+                    <option value="">Laminacja rzes + stylizacja brwi   225,00 zł</option>
+                    <option value="">Pakiet: Laminacja brwi + laminacja rzes 275,00 zł</option>  
                 </select>
+            </div>
+            <!-- Kalendarz -->
+            <div class="form_item">
+                <label for="calendar">Wybierz date:</label>
+                <input type="datetime-local" id="calendar"
+                 min="2023-04-05T08:30" max="2030-06-01T08:30"
+                 pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}">
             </div>
             <!-- Pole tekstowe dla wiadomości -->
             <div class="form_item">

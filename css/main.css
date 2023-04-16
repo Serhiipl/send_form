@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*----------------------------------------------------------------*/
 .form {
-  max-width: 34.375rem;
+  max-width: 25rem;
   margin: 0rem auto;
   color: antiquewhite;
   padding: 1.875rem 0;
@@ -84,11 +84,17 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgb(174, 170, 141);
 }
 .form_title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin: 0rem 0rem 1.875rem 0rem;
+  text-align: center;
 }
 .form_item {
+  margin: 0rem 0rem 1.3rem 0rem;
+}
+.form .custom-select {
+  width: 20rem;
+  border-radius: 5px;
   margin: 0rem 0rem 1.3rem 0rem;
 }
 .form_label {
@@ -97,14 +103,103 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0rem 0rem 0.6rem 0rem;
 }
 .form_input {
-  height: 3.125rem;
+  height: 2.5rem;
   padding: 0rem 1.25rem;
   border-radius: 0.3125rem;
   width: 100%;
   font-size: 1.125rem;
 }
+.form_input::-webkit-input-placeholder {
+  color: #7c8160;
+}
+.form_input::-moz-placeholder {
+  color: #7c8160;
+}
+.form_input:-ms-input-placeholder {
+  color: #7c8160;
+}
+.form_input::-ms-input-placeholder {
+  color: #7c8160;
+}
+.form_input::placeholder {
+  color: #7c8160;
+}
 .form textarea {
   min-height: 7.5rem;
   resize: vertical;
   padding: 1rem;
+}
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: antiquewhite;
+  border-radius: 0.3125rem;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #7c8160 transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #7c8160 transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+  color: #000000;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  border-radius: 0.3125rem;
+  position: absolute;
+  background-color: rgb(202, 198, 179);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  height: 18.75rem;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+/*hide scroll bar in (options) chrome based*/
+.select-items::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }

@@ -1,0 +1,1 @@
+"use strict";import{Select}from"./module-select/select";const select=new Select;

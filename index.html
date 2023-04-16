@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
-    <script src="/js/main.js"></script>
+    
     <title>site</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
             <!-- Imie użytkownika -->
             <div class="form_item">
                 <label for="formName" class="form_label">Imie*:</label>
-                <input type="text" id="formName" name="name" class="form_input">
+                <input type="text" id="formName" name="name" class="form_input" placeholder="Imie">
             </div>
             <!-- Telefon użytkownika -->
             <div class="form_item">
@@ -30,9 +30,11 @@
             </div>
             <!-- Menu uslug na brwi -->
             <div class="form_item">
-                <div class="form_label">Zabiegi na Brwi</div>
-                <select name="brews" id="brews_select">
-                    <option value=""></option>
+            <div class="custom-select">
+                <!-- <div class="form_label">Zabiegi na Brwi</div> -->
+                <select>
+                    <!-- name="brews" id="brews_select" -->
+                    <option value="0">Wybierz uslugę:Zabiegi na Brwi</option>
                     <option value="regulacja_brwi">Regulacja brwi 45,00 zł</option>
                     <option value="regulacja_brwi_meska">Regulacja brwi męska 45,00 zł</option>
                     <option value="regulacja_brwi+przerzedzenie">Regulacja brwi + przerzędzenie 65,00 zł</option>
@@ -50,11 +52,13 @@
                     <option value="konsultacja_makijaz_permanentny">Konsultacja makijaz permanentny Darmowa</option>
                 </select>
             </div>
+            </div>
             <!-- Menu uslug na rzęsy + multi uslugi -->
             <div class="form_item">
-                <div class="form_label">Rzesy + multi usługi</div>
+            <div class="custom-select">
+                <!-- <div class="form_lebel">Rzesy + multi usługi</div> -->
                 <select name="things" id="things_select">
-                    <option value=""></option>
+                    <option value="0">Wybierz uslugę: Rzesy + multi usługi</option>
                     <option value="laminacja_dolnych_rzes">Laminacja dolnych rzęs(dodatek do laminacji rzęs) 55,00 zł</option>
                     <option value="botox_rzes">Botox rzęs(dostepny z innymi zabiegami)💚 25,00 zł</option>
                     <option value="botox_brwi+botox_rzes">Botox brwi + botox rzęs 55,00 zł</option>
@@ -68,6 +72,8 @@
                     <option value="pakiet_aminacja_brwi+laminacja_rzes">Pakiet: Laminacja brwi + laminacja rzęs 275,00 zł</option>  
                 </select>
             </div>
+            </div>
+           
             <!-- Kalendarz -->
             <div class="form_item">
                 <label for="calendar">Wybierz date:</label>
@@ -87,9 +93,11 @@
                     <label for="form_agreement" class="checkbox_label">Zgoda na kontakt marketingowy</label>
                 </div>
             </div>
+           
             <button type="submit" class="form_button">Zatwierdzić</button>
         </form>
     </div>
-</div>    
+</div>    <script  src="/js/select.js"></script>
+    <script  src="/js/main.js"></script>
 </body>
 </html>

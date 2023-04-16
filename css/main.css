@@ -92,11 +92,6 @@ h1, h2, h3, h4, h5, h6 {
 .form_item {
   margin: 0rem 0rem 1.3rem 0rem;
 }
-.form .custom-select {
-  width: 20rem;
-  border-radius: 5px;
-  margin: 0rem 0rem 1.3rem 0rem;
-}
 .form_label {
   font-size: 1.125rem;
   display: block;
@@ -108,6 +103,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.3125rem;
   width: 100%;
   font-size: 1.125rem;
+  cursor: pointer;
+}
+.form_input:focus {
+  -webkit-box-shadow: 0 0 0.625rem whitesmoke;
+          box-shadow: 0 0 0.625rem whitesmoke;
+  background-color: #e3e3e3;
 }
 .form_input::-webkit-input-placeholder {
   color: #7c8160;
@@ -129,10 +130,52 @@ h1, h2, h3, h4, h5, h6 {
   resize: vertical;
   padding: 1rem;
 }
+.form_button {
+  position: relative;
+  top: 0;
+  margin: auto;
+  min-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 3rem;
+  background-color: transparent;
+  border: 1px solid #616446;
+  color: rgb(255, 255, 255);
+  font-size: larger;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 1rem 0.2rem 1rem 0.2rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  -webkit-box-shadow: 3px 8px 10px 0px rgb(59, 73, 51);
+          box-shadow: 3px 8px 10px 0px rgb(59, 73, 51);
+  -webkit-transition: blackground-color 0.5s ease 0s;
+  transition: blackground-color 0.5s ease 0s;
+}
+.form_button:hover {
+  background-color: #1c1d12;
+  color: #dde4b4;
+}
+.form_button:active {
+  top: 0.1875rem;
+}
+
 /*the container must be positioned relative:*/
 .custom-select {
   position: relative;
   font-family: Arial;
+  width: 20rem;
+  border-radius: 5px;
+  margin: 0rem 0rem 1.3rem 0rem;
+  cursor: pointer;
 }
 
 .custom-select select {

@@ -47,11 +47,7 @@ padding: 1.875rem 0;
     &_item {
         margin: 0rem 0rem 1.3rem 0rem;
     }
-    .custom-select {
-        width: 20rem;
-        border-radius: 5px;
-        margin: 0rem 0rem 1.3rem 0rem;
-    }
+  
     // .form_label
 
     &_label {
@@ -68,6 +64,11 @@ padding: 1.875rem 0;
         border-radius: .3125rem;
         width: 100%;
         font-size: 1.125rem;
+        cursor: pointer;
+        &:focus {
+            box-shadow: 0 0 .625rem whitesmoke;
+            background-color: #e3e3e3;
+        }
     }
     &_input::placeholder {
         color: #7c8160;
@@ -82,6 +83,34 @@ padding: 1.875rem 0;
     // .form_button
 
     &_button {
+        position: relative;
+        top: 0;
+        margin: auto;
+        min-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 3rem;
+        background-color: transparent;
+        border:1px solid #616446;
+        color: rgb(255, 255, 255);
+        font-size: larger;
+        letter-spacing: .125rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 1rem .2rem 1rem .2rem;
+        padding: .5rem 1rem;
+        font-weight: 600;
+        box-shadow: 3px 8px 10px 0px rgb(59, 73, 51);
+        transition: blackground-color 0.5s ease 0s;
+
+        &:hover {
+            background-color: #1c1d12;
+            color: #dde4b4;
+        }
+        &:active {
+            top: .1875rem;
+        }
     }
 }
 
@@ -102,6 +131,10 @@ padding: 1.875rem 0;
 .custom-select {
     position: relative;
     font-family: Arial;
+    width: 20rem;
+    border-radius: 5px;
+    margin: 0rem 0rem 1.3rem 0rem;
+    cursor: pointer;
   }
   
   .custom-select select {

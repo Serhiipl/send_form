@@ -21,10 +21,7 @@ max-width: 25rem;
 margin: 0rem auto;
 color:antiquewhite;
 padding: 1.875rem 0;
-    // .form_wrapper
-
-    &_wrapper {
-    }
+    
 
     // .form_body
 
@@ -73,6 +70,10 @@ padding: 1.875rem 0;
     &_input::placeholder {
         color: #7c8160;
     }
+    &_input._error {
+        box-shadow: 0 0 .625rem rgb(255, 0, 0);
+            background-color: #ffffff;
+    }
     
     textarea {
         min-height: 7.5rem;
@@ -116,11 +117,14 @@ padding: 1.875rem 0;
 
 .checkbox {
 
+
     // .checkbox_input
 
     &_input {
     }
-
+    &_input._error {
+      box-shadow: 0 0 .625rem rgb(255, 0, 0);
+    }
     // .checkbox_label
 
     &_label {

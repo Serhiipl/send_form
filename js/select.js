@@ -1,7 +1,7 @@
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select");
-console.log(x);
+
 l = x.length;
 for (let i = 0; i < l; i++) {
   selElmnt = x[i].getElementsByTagName("select")[0];

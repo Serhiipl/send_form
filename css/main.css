@@ -125,6 +125,11 @@ h1, h2, h3, h4, h5, h6 {
 .form_input::placeholder {
   color: #7c8160;
 }
+.form_input._error {
+  -webkit-box-shadow: 0 0 0.625rem rgb(255, 0, 0);
+          box-shadow: 0 0 0.625rem rgb(255, 0, 0);
+  background-color: #ffffff;
+}
 .form textarea {
   min-height: 7.5rem;
   resize: vertical;
@@ -168,6 +173,10 @@ h1, h2, h3, h4, h5, h6 {
   top: 0.1875rem;
 }
 
+.checkbox_input._error {
+  -webkit-box-shadow: 0 0 0.625rem rgb(255, 0, 0);
+          box-shadow: 0 0 0.625rem rgb(255, 0, 0);
+}
 /*the container must be positioned relative:*/
 .custom-select {
   position: relative;

@@ -12,6 +12,19 @@ document.addEventListener('DOMContentLoaded', function (){
         let formData = new FormData(form);
         console.log(formData);
         if (error === 0) {
+            form.classList.add('_sending');
+            let response = await fetch('sendmail.php',{
+                method: 'POST',
+                body: formData
+            });
+            if (response.ok) {
+                let result = await response.json();
+                alert(result.message);
+                formPreviev.innerHTML = '';
+                form.reset();
+            } else {
+                alert("blad")
+            }
             console.log('all OK')
         } else {
             alert ('wypelnij pola');
@@ -69,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function (){
     function emailTest(input) {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
     }
+
     function telTest(input) {
         return !/^[\d\+][\d\(\)\ -]{6,14}\d$/.test(input.value);
     }

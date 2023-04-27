@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function (){
         console.log(formData);
         if (error === 0) {
             form.classList.add('_sending');
+
             let response = await fetch('sendmail.php',{
                 method: 'POST',
                 body: formData
@@ -22,14 +23,18 @@ document.addEventListener('DOMContentLoaded', function (){
                 alert(result.message);
                 formPreviev.innerHTML = '';
                 form.reset();
+                form.classList.remove('_sending');
             } else {
-                alert("blad")
+                alert("blad");
+                form.classList.remove('_sending');
             }
             console.log('all OK')
         } else {
             alert ('wypelnij pola');
         }
     }
+
+
     function formValidate(form) {
         let error = 0;
         let formReq = document.querySelectorAll('._req');

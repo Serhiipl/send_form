@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
-.form_body_sending::after {
+.form_body._sending::after {
   opacity: 1;
   visibility: visible;
 }

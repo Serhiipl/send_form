@@ -41,14 +41,14 @@ padding: 1.875rem 0;
           visibility: hidden;
           transition: all 0.5s ease 0s;
         }
-        &_sending::after {
-          opacity: 1;
-          visibility: visible;
-        }
+        
 
         
     }
-
+    &_body._sending::after {
+      opacity: 1;
+      visibility: visible;
+    }
     // .form_title
 
     &_title {

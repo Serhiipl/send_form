@@ -36,3 +36,14 @@ if(trim(!empty($_POST['message']))){
 // dodac selecty i kalendarz
 
 // wysylamy forme
+if(!$mail->send()) {
+    $message = 'Blad';
+} else {
+    $message = 'Wyslano';
+}
+
+$response = ['message' => $message];
+
+header('Content-type: application/json');
+echo json_encode($response);
+?>

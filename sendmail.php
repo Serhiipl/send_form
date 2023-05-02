@@ -1,6 +1,10 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
 
 require'PHPMailer/src/Exception.php';
 require'PHPMailer/src/PHPMailer.php';
@@ -32,7 +36,8 @@ if(trim(!empty($_POST['email']))){
 if(trim(!empty($_POST['message']))){
     $body.='<p><strong>Imie:</strong> '.$_POST['message'].'</p>';
 }
-
+$body.='<p><strong>Zabiegi na Brwi:</strong> '.$_POST['brews_select'].'</p>';
+$body.='<p><strong>Zabiegi naRzesy + multi usługi:</strong> '.$_POST['things_select'].'</p>';
 // dodac selecty i kalendarz
 
 // wysylamy forme

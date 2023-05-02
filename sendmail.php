@@ -38,6 +38,7 @@ if(trim(!empty($_POST['message']))){
 }
 $body.='<p><strong>Zabiegi na Brwi:</strong> '.$_POST['brews_select'].'</p>';
 $body.='<p><strong>Zabiegi naRzesy + multi usługi:</strong> '.$_POST['things_select'].'</p>';
+$body.='<p><strong> Data:</strong> '.$_POST['calendar'].'</p>';
 // dodac selecty i kalendarz
 
 // wysylamy forme

@@ -22,7 +22,7 @@ $mail->isHTML(true);
 $mail->setFrom('strona@sergioslab.pl', 'Serhii');
 // komu wysylamy
 $mail->addAddress('badzega@gmail.com');
-$mail->addAddress('katerynasukhovetska@gmail.com');
+// $mail->addAddress('katerynasukhovetska@gmail.com');
 // tema wiadomosci
 $mail->Subject = 'Kochanie ktos cos chce';
 
@@ -46,6 +46,7 @@ $selectedOption = $_POST['things_select'];
 // $body.='<p><strong>Zabiegi naRzesy + multi usługi:</strong> '.$_POST['things_select'].'</p>'
 $body .= '<p><strong>Zabiegi naRzesy + multi usługi:</strong> '.$selectedOption.'</p>';
 $body.='<p><strong>Zabiegi na Brwi:</strong> '.$_POST['brews_select'].'</p>';
+$body.='<p><strong>Data wybrana przez klienta:</strong> '.$_POST['calendar'].'</p>';
 
 // $body.='<p><strong> Data:</strong> '.$_POST['calendar'].'</p>';
 

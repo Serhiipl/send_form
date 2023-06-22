@@ -221,7 +221,7 @@ h6 {
 .custom-select {
   position: relative;
   font-family: Arial;
-  width: 20rem;
+  width: 100%;
   border-radius: 5px;
   margin: 0rem 0rem 1.3rem 0rem;
   cursor: pointer;
@@ -232,7 +232,7 @@ h6 {
 }
 
 .select-selected {
-  background-color: antiquewhite;
+  background-color: #ffffff;
   border-radius: 0.3125rem;
 }
 

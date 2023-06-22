@@ -1,89 +1,175 @@
 <div class="form_wrapper">
-    <div class="form">
-        <form action="#" id="form" class="form_body">
-            <h2 class="form_title">Umów się na wizyte</h2>
-            <!-- Imie użytkownika -->
-            <div class="form_item">
-                <label for="formName" class="form_label">Imie*:</label>
-                <input type="text" id="formName" name="name" class="form_input _req" placeholder="Imie">
-            </div>
-            <!-- Telefon użytkownika -->
-            <div class="form_item">
-                <label for="formTel" class="form_label">Telefon*:</label>
-                <input type="text" id="formTel" name="telefon" class="form_input _req _tel">
-            </div>
-            <!-- E-mail użytkownika -->
-            <div class="form_item">
-                <label for="formEmail" class="form_label">E-mail:</label>
-                <input type="text" id="formEmail" name="email" class="form_input _req _email">
-            </div>
-            <!-- Menu uslug na brwi -->
-            <div class="form_item">
-            <div class="custom-select">
-                <!-- <div class="form_label">Zabiegi na Brwi</div> -->
-                <select name="brews_select" id="brews_select">
-                    <!-- name="brews" id="brews_select" -->
-                    <option value="0">Wybierz uslugę:Zabiegi na Brwi</option>
-                    <option value="regulacja_brwi">Regulacja brwi 45,00 zł</option>
-                    <option value="regulacja_brwi_meska">Regulacja brwi męska 45,00 zł</option>
-                    <option value="regulacja_brwi+przerzedzenie">Regulacja brwi + przerzędzenie 65,00 zł</option>
-                    <option value="regulacja_brwi+koloryzacja">Regulacja brwi + koloryzacja 80,00 zł</option>
-                    <option value="koloryzacja_brwi_farbka/henna pudrowa">Koloryzacja brwi(farbka/henna pudrowa) 45,00 zł</option>
-                    <option value="regulacja+koloryzacja+botox_brwi">Regulacja + koloryzacja + botox brwi💚 110,00 zł</option>
-                    <option value="botox_brwi_O2Farm">Botox brwi O2Farm💚 45,00 zł</option>
-                    <option value="henna_brwi+botox_O2Farm">Henna brwi + botox O2Farm💚 75,00 zł</option>
-                    <option value="regulacja_brwi+botox_O2Farm">Regulacja brwi + botox O2Farm💚 75,00 zł</option>
-                    <option value="flexing_brwi/laminacja_od_Elan_Supersonic">Flexing brwi/laminacja od Elan "Supersonic"💖 135,00 zł</option>
-                    <option value="laminacja_brwi+regulacja">Laminacja brwi + regulacja 125,00 zł</option>
-                    <option value="pakiet_3w1_brwi">Pakiet 3w1 brwi (farbowanie+regulacja+laminacja) 150,00 zł</option>
-                    <option value="laminacja+regulacja+przerzędzenie">Laminacja + regulacja + przerzędzenie 165,00 zł</option>
-                    <option value="makijaz_permanentny_brwi_modelka">Makijaz permanentny brwi (modelka) 290,00 zł</option>
-                    <option value="konsultacja_makijaz_permanentny">Konsultacja makijaz permanentny Darmowa</option>
-                </select>
-            </div>
-            </div>
-            <!-- Menu uslug na rzęsy + multi uslugi -->
-            <div class="form_item">
-            <div class="custom-select">
-                <!-- <div class="form_lebel">Rzesy + multi usługi</div> -->
-                <select name="things_select" id="things_select">
-                    <option value="0">Wybierz uslugę: Rzesy + multi usługi</option>
-                    <option value="laminacja_dolnych_rzes">Laminacja dolnych rzęs(dodatek do laminacji rzęs) 55,00 zł</option>
-                    <option value="botox_rzes">Botox rzęs(dostepny z innymi zabiegami)💚 25,00 zł</option>
-                    <option value="botox_brwi+botox_rzes">Botox brwi + botox rzęs 55,00 zł</option>
-                    <option value="henna_brwi+henna_rzes">Henna brwi + henna rzęs 🖤 75,00 zł</option>
-                    <option value="regulacja_brwi+henna_rzes">Regulacja brwi + henna rzęs 🖤 75,00 zł</option>
-                    <option value="regulacja+koloryzacja+henna_rzes">Regulacja + koloryzacja + henna rzęs 110,00 zł</option>
-                    <option value="laminacja_rzes+odżywka_bez_farbowania">Laminacja rzęs + odżywka bez farbowania 135,00 zł</option>
-                    <option value="laminacja_brwi+henna_rzęs">Laminacja brwi + henna rzęs 135,00 zł</option>
-                    <option value="flexing_rzes_ekstra_laminacja_Supersonic">Flexing rzęs/ekstra laminacja "Supersonic"💖 165,00 zł</option>
-                    <option value="laminacja_rzes+stylizacja_brwi">Laminacja rzęs + stylizacja brwi  225,00 zł</option>
-                    <option value="pakiet_aminacja_brwi+laminacja_rzes">Pakiet: Laminacja brwi + laminacja rzęs 275,00 zł</option>  
-                </select>
-            </div>
-            </div>
-           
-            <!-- Kalendarz -->
-            <div class="form_item">
-                <label for="calendar" class="form_label">Wybierz date:</label>
-                <input type="datetime-local" id="calendar" name="calendar"
-                 min="2023-04-05T08:30" max="2030-06-01T08:30"
-                 pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}" class="calendar">
-            </div>
-            <!-- Pole tekstowe dla wiadomości -->
-            <div class="form_item">
-                <label for="formMessage" class="form_label">Wiadomość (opcionalnie):</label>
-                <textarea name="message" id="formMessage" class="form_input _textarea"></textarea>
-            </div>
-            <!-- Checkbox na zgodde marketingową -->
-            <div class="form_item">
-                <div class="checkbox">
-                    <input type="checkbox"  id="form_agreement" value="accepted" name="agreement" class="checkbox_input _req">
-                    <label for="form_agreement" class="checkbox_label">Zgoda na kontakt marketingowy</label>
-                </div>
-            </div>
-           
-            <button type="submit" class="form_button">wyslij</button>
-        </form>
-    </div>
+  <div class="form">
+    <form action="#" id="form" class="form_body">
+      <h2 class="form_title">Umów się na wizyte</h2>
+      <!-- Imie użytkownika -->
+      <div class="form_item">
+        <label for="formName" class="form_label">Imie*:</label>
+        <input
+          type="text"
+          id="formName"
+          name="name"
+          class="form_input _req"
+          placeholder="Imie"
+        />
+      </div>
+      <!-- Telefon użytkownika -->
+      <div class="form_item">
+        <label for="formTel" class="form_label">Telefon*:</label>
+        <input
+          type="text"
+          id="formTel"
+          name="telefon"
+          class="form_input _req _tel"
+        />
+      </div>
+      <!-- E-mail użytkownika -->
+      <div class="form_item">
+        <label for="formEmail" class="form_label">E-mail:</label>
+        <input
+          type="text"
+          id="formEmail"
+          name="email"
+          class="form_input _req _email"
+        />
+      </div>
+      <!-- Menu uslug na brwi -->
+      <div class="form_item">
+        <div class="custom-select">
+          <!-- <div class="form_label">Zabiegi na Brwi</div> -->
+          <select name="brews_select" id="brews_select">
+            <!-- name="brews" id="brews_select" -->
+            <option value="0">Wybierz uslugę:Zabiegi na Brwi</option>
+            <option value="regulacja_brwi">Regulacja brwi 45,00 zł</option>
+            <option value="regulacja_brwi_meska">
+              Regulacja brwi męska 45,00 zł
+            </option>
+            <option value="regulacja_brwi+przerzedzenie">
+              Regulacja brwi + przerzędzenie 65,00 zł
+            </option>
+            <option value="regulacja_brwi+koloryzacja">
+              Regulacja brwi + koloryzacja 80,00 zł
+            </option>
+            <option value="koloryzacja_brwi_farbka/henna pudrowa">
+              Koloryzacja brwi(farbka/henna pudrowa) 45,00 zł
+            </option>
+            <option value="regulacja+koloryzacja+botox_brwi">
+              Regulacja + koloryzacja + botox brwi💚 110,00 zł
+            </option>
+            <option value="botox_brwi_O2Farm">
+              Botox brwi O2Farm💚 45,00 zł
+            </option>
+            <option value="henna_brwi+botox_O2Farm">
+              Henna brwi + botox O2Farm💚 75,00 zł
+            </option>
+            <option value="regulacja_brwi+botox_O2Farm">
+              Regulacja brwi + botox O2Farm💚 75,00 zł
+            </option>
+            <option value="flexing_brwi/laminacja_od_Elan_Supersonic">
+              Flexing brwi/laminacja od Elan "Supersonic"💖 135,00 zł
+            </option>
+            <option value="laminacja_brwi+regulacja">
+              Laminacja brwi + regulacja 125,00 zł
+            </option>
+            <option value="pakiet_3w1_brwi">
+              Pakiet 3w1 brwi (farbowanie+regulacja+laminacja) 150,00 zł
+            </option>
+            <option value="laminacja+regulacja+przerzędzenie">
+              Laminacja + regulacja + przerzędzenie 165,00 zł
+            </option>
+            <option value="makijaz_permanentny_brwi_modelka">
+              Makijaz permanentny brwi (modelka) 290,00 zł
+            </option>
+            <option value="konsultacja_makijaz_permanentny">
+              Konsultacja makijaz permanentny Darmowa
+            </option>
+          </select>
+        </div>
+      </div>
+      <!-- Menu uslug na rzęsy + multi uslugi -->
+      <div class="form_item">
+        <div class="custom-select">
+          <!-- <div class="form_lebel">Rzesy + multi usługi</div> -->
+          <select name="things_select" id="things_select">
+            <option value="0">Wybierz uslugę: Rzesy + multi usługi</option>
+            <option value="laminacja_dolnych_rzes">
+              Laminacja dolnych rzęs(dodatek do laminacji rzęs) 55,00 zł
+            </option>
+            <option value="botox_rzes">
+              Botox rzęs(dostepny z innymi zabiegami)💚 25,00 zł
+            </option>
+            <option value="botox_brwi+botox_rzes">
+              Botox brwi + botox rzęs 55,00 zł
+            </option>
+            <option value="henna_brwi+henna_rzes">
+              Henna brwi + henna rzęs 🖤 75,00 zł
+            </option>
+            <option value="regulacja_brwi+henna_rzes">
+              Regulacja brwi + henna rzęs 🖤 75,00 zł
+            </option>
+            <option value="regulacja+koloryzacja+henna_rzes">
+              Regulacja + koloryzacja + henna rzęs 110,00 zł
+            </option>
+            <option value="laminacja_rzes+odżywka_bez_farbowania">
+              Laminacja rzęs + odżywka bez farbowania 135,00 zł
+            </option>
+            <option value="laminacja_brwi+henna_rzęs">
+              Laminacja brwi + henna rzęs 135,00 zł
+            </option>
+            <option value="flexing_rzes_ekstra_laminacja_Supersonic">
+              Flexing rzęs/ekstra laminacja "Supersonic"💖 165,00 zł
+            </option>
+            <option value="laminacja_rzes+stylizacja_brwi">
+              Laminacja rzęs + stylizacja brwi 225,00 zł
+            </option>
+            <option value="pakiet_aminacja_brwi+laminacja_rzes">
+              Pakiet: Laminacja brwi + laminacja rzęs 275,00 zł
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Kalendarz -->
+      <div class="form_item">
+        <label for="calendar" class="form_label">Wybierz date:</label>
+        <input
+          type="datetime-local"
+          id="calendar"
+          name="calendar"
+          min="2023-04-05T08:30"
+          max="2030-06-01T08:30"
+          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+          class="calendar"
+        />
+      </div>
+      <!-- Pole tekstowe dla wiadomości -->
+      <div class="form_item">
+        <label for="formMessage" class="form_label"
+          >Wiadomość (opcionalnie):</label
+        >
+        <textarea
+          name="message"
+          id="formMessage"
+          class="form_input _textarea"
+        ></textarea>
+      </div>
+      <!-- Checkbox na zgodde marketingową -->
+      <div class="form_item">
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            id="form_agreement"
+            value="accepted"
+            name="agreement"
+            class="checkbox_input _req"
+          />
+          <label for="form_agreement" class="checkbox_label"
+            >Zgoda na kontakt marketingowy</label
+          >
+        </div>
+      </div>
+
+      <button type="submit" class="form_button">wyslij</button>
+    </form>
+  </div>
 </div>

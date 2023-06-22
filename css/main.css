@@ -5,24 +5,32 @@
   border: 0;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-:focus, :active {
+:focus,
+:active {
   outline: none;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
   outline: none;
 }
 
-nav, footer, header, aside {
+nav,
+footer,
+header,
+aside {
   display: block;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -33,7 +41,10 @@ html, body {
   -webkit-text-size-adjust: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font-family: inherit;
 }
 
@@ -50,7 +61,8 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
 }
 
@@ -58,7 +70,10 @@ a:hover {
   text-decoration: none;
 }
 
-ol, ul, li, menu {
+ol,
+ul,
+li,
+menu {
   list-style: none;
 }
 
@@ -67,7 +82,12 @@ img {
   vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -115,7 +135,8 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   margin: 0rem 0rem 0.6rem 0rem;
 }
-.form_input, .form .calendar {
+.form_input,
+.form .calendar {
   height: 2.5rem;
   padding: 0rem 1.25rem;
   border-radius: 0.3125rem;
@@ -123,7 +144,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.125rem;
   cursor: pointer;
 }
-.form_input:focus, .form .calendar:focus {
+.form_input:focus,
+.form .calendar:focus {
   -webkit-box-shadow: 0 0 0.625rem whitesmoke;
           box-shadow: 0 0 0.625rem whitesmoke;
   background-color: #e3e3e3;
@@ -233,7 +255,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*style the items (options), including the selected item:*/
-.select-items div, .select-selected {
+.select-items div,
+.select-selected {
   color: #000000;
   padding: 8px 16px;
   border: 1px solid transparent;
@@ -270,6 +293,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-.select-items div:hover, .same-as-selected {
+.select-items div:hover,
+.same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }

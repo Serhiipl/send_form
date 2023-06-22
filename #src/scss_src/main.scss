@@ -1,227 +1,288 @@
 /*reset css*/
-*{padding: 0; margin: 0; border: 0;}
-*,*::before,*::after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box; box-sizing: border-box;}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-nav,footer,header,aside {display: block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
-input,button,textarea,select{font-family:inherit;}
-input::-ms-clear{display: none;}
-button {cursor: pointer;}
-button::-moz-focus-inner{padding:0;border:0;}
-a,a:visited {text-decoration: none;}
-a:hover{text-decoration:none;}
-ol, ul,li, menu {list-style: none;}
-img {max-width: 100%;vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ol,
+ul,
+li,
+menu {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
 /*----------------------------------------------------------------*/
 
 .form {
-max-width: 25rem;
-margin: 0rem auto;
-color:antiquewhite;
-padding: 1.875rem 0;
-    
+  max-width: 25rem;
+  margin: 0rem auto;
+  color: antiquewhite;
+  padding: 1.875rem 0;
 
-    // .form_body
+  // .form_body
 
-    &_body {
-      position: relative;
-        padding: 1rem 1rem;
-        background-color:rgb(174, 170, 141);
-        &::after{
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background:rgba(174, 170, 141, 0.881) url("/img/loading.gif") center / 3.125rem no-repeat;
-          opacity: 0;
-          visibility: hidden;
-          transition: all 0.5s ease 0s;
-        }
-        
-
-        
+  &_body {
+    position: relative;
+    padding: 1rem 1rem;
+    background-color: rgb(174, 170, 141);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(174, 170, 141, 0.881) url("/img/loading.gif") center /
+        3.125rem no-repeat;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease 0s;
     }
-    &_body._sending::after {
-      opacity: 1;
-      visibility: visible;
-    }
-    // .form_title
+  }
+  &_body._sending::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  // .form_title
 
-    &_title {
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin: 0rem 0rem 1.875rem 0rem;
-        text-align: center;
-    }
+  &_title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0rem 0rem 1.875rem 0rem;
+    text-align: center;
+  }
 
-    // .form_item
+  // .form_item
 
-    &_item {
-        margin: 0rem 0rem 1.3rem 0rem;
-    }
-  
-    // .form_label
+  &_item {
+    margin: 0rem 0rem 1.3rem 0rem;
+  }
 
-    &_label {
-        font-size: 1.125rem;
-        display: block;
-        margin: 0rem 0rem .6rem 0rem;
-    }
+  // .form_label
 
-    // .form_input
+  &_label {
+    font-size: 1.125rem;
+    display: block;
+    margin: 0rem 0rem 0.6rem 0rem;
+  }
 
-    &_input, .calendar{
-        height: 2.5rem;
-        padding: 0rem 1.25rem;
-        border-radius: .3125rem;
-        width: 100%;
-        font-size: 1.125rem;
-        cursor: pointer;
-        &:focus {
-            box-shadow: 0 0 .625rem whitesmoke;
-            background-color: #e3e3e3;
-        }
-    }
-    &_input::placeholder {
-        color: #7c8160;
-    }
-    &_input._error {
-        box-shadow: 0 0 .625rem rgb(255, 0, 0);
-            background-color: #ffffff;
-    }
-    
-    textarea {
-        min-height: 7.5rem;
-        resize: vertical;
-        padding: 1rem;
-    }
+  // .form_input
 
-    // .form_button
-
-    &_button {
-        position: relative;
-        top: 0;
-        margin: auto;
-        min-width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 3rem;
-        background-color: transparent;
-        border:1px solid #616446;
-        color: rgb(255, 255, 255);
-        font-size: larger;
-        letter-spacing: .125rem;
-        text-transform: uppercase;
-        cursor: pointer;
-        border-radius: 1rem .2rem 1rem .2rem;
-        padding: .5rem 1rem;
-        font-weight: 600;
-        box-shadow: 3px 8px 10px 0px rgb(59, 73, 51);
-        transition: blackground-color 0.5s ease 0s;
-
-        &:hover {
-            background-color: #1c1d12;
-            color: #dde4b4;
-        }
-        &:active {
-            top: .1875rem;
-        }
+  &_input,
+  .calendar {
+    height: 2.5rem;
+    padding: 0rem 1.25rem;
+    border-radius: 0.3125rem;
+    width: 100%;
+    font-size: 1.125rem;
+    cursor: pointer;
+    &:focus {
+      box-shadow: 0 0 0.625rem whitesmoke;
+      background-color: #e3e3e3;
     }
+  }
+  &_input::placeholder {
+    color: #7c8160;
+  }
+  &_input._error {
+    box-shadow: 0 0 0.625rem rgb(255, 0, 0);
+    background-color: #ffffff;
+  }
+
+  textarea {
+    min-height: 7.5rem;
+    resize: vertical;
+    padding: 1rem;
+  }
+
+  // .form_button
+
+  &_button {
+    position: relative;
+    top: 0;
+    margin: auto;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3rem;
+    background-color: transparent;
+    border: 1px solid #616446;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 1rem 0.2rem 1rem 0.2rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    box-shadow: 3px 8px 10px 0px rgb(59, 73, 51);
+    transition: blackground-color 0.5s ease 0s;
+
+    &:hover {
+      background-color: #1c1d12;
+      color: #dde4b4;
+    }
+    &:active {
+      top: 0.1875rem;
+    }
+  }
 }
 
 .checkbox {
+  // .checkbox_input
 
+  &_input {
+  }
+  &_input._error {
+    box-shadow: 0 0 0.625rem rgb(255, 0, 0);
+  }
+  // .checkbox_label
 
-    // .checkbox_input
-
-    &_input {
-    }
-    &_input._error {
-      box-shadow: 0 0 .625rem rgb(255, 0, 0);
-    }
-    // .checkbox_label
-
-    &_label {
-    }
+  &_label {
+  }
 }
 
 /*the container must be positioned relative:*/
 .custom-select {
-    position: relative;
-    font-family: Arial;
-    width: 20rem;
-    border-radius: 5px;
-    margin: 0rem 0rem 1.3rem 0rem;
-    cursor: pointer;
-  }
-  
-  .custom-select select {
-    display: none; /*hide original SELECT element:*/
-  }
-  
-  .select-selected {
-    background-color: antiquewhite;
-    border-radius: .3125rem;
-  }
-  
-  /*style the arrow inside the select element:*/
-  .select-selected:after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #7c8160 transparent transparent transparent;
-  }
-  
-  /*point the arrow upwards when the select box is open (active):*/
-  .select-selected.select-arrow-active:after {
-    border-color: transparent transparent #7c8160 transparent;
-    top: 7px;
-  }
-  
-  /*style the items (options), including the selected item:*/
-  .select-items div,.select-selected {
-    color: #000000;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-    cursor: pointer;
-    user-select: none;
-
-  }
-  
-  /*style items (options):*/
-  .select-items {
-    border-radius: .3125rem;
-    position: absolute;
-    background-color: rgb(202, 198, 179);
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    height: 18.75rem;
-    overflow: auto;
-    scrollbar-width: none;  /* Firefox */
-  }
-  /*hide scroll bar in (options) chrome based*/
-  .select-items::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+  position: relative;
+  font-family: Arial;
+  width: 20rem;
+  border-radius: 5px;
+  margin: 0rem 0rem 1.3rem 0rem;
+  cursor: pointer;
 }
-  
-  /*hide the items when the select box is closed:*/
-  .select-hide {
-    display: none;
-  }
-  
-  .select-items div:hover, .same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: antiquewhite;
+  border-radius: 0.3125rem;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #7c8160 transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #7c8160 transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: #000000;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  border-radius: 0.3125rem;
+  position: absolute;
+  background-color: rgb(202, 198, 179);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  height: 18.75rem;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+}
+/*hide scroll bar in (options) chrome based*/
+.select-items::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
